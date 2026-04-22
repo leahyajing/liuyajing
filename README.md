@@ -1,137 +1,81 @@
-# Promotion Effectiveness Analysis in FMCG
+# ACC102 Personal Assignment  
+## Promotion Effectiveness Analysis in FMCG Retail
 
 ## Project Overview
+This project examines the effectiveness of promotional activities in the FMCG (Fast-Moving Consumer Goods) retail sector. Using Python-based data analysis, the study investigates whether products under promotion demonstrate stronger sales performance than those without promotion. The project aims to apply data analytics techniques to a practical business question and generate evidence-based insights for decision-making.
 
-This project examines the effectiveness of promotions in the fast-moving consumer goods (FMCG) sector using Python-based data analysis. The main objective is to evaluate whether promotional activities are associated with changes in sales and revenue, and to provide business insights for decision-making.
+## Analytical Objective
+The central objective of this project is to evaluate the following question:
 
-The project was developed as a GitHub Data Analysis Project for ACC102 Mini Assignment (Track 2). The analysis focuses on building a clear and reproducible workflow from raw data input to cleaned data, descriptive analysis, visualisation, and final business interpretation. 
+**To what extent do promotions influence sales performance in FMCG retail?**
 
-## Analytical Problem
+Promotions are widely used as a common retail strategy to increase demand, attract customers, and improve short-term sales. However, their actual effectiveness may vary depending on the nature of the products and the structure of the data. This analysis therefore focuses on assessing promotional impact through data cleaning, visualization, and statistical interpretation.
 
-Promotions are widely used in FMCG markets to increase product visibility and stimulate demand. However, promotions may not always lead to better business outcomes. The key analytical question in this project is:
+## Intended Audience
+This analysis is intended for business stakeholders who are involved in retail decision-making, including:
 
-**Do promotions improve sales and revenue performance in the FMCG dataset?**
+- retail managers  
+- marketing managers  
+- category managers  
+- business analysts  
 
-This project is designed for a business-oriented audience, such as marketing managers, retail analysts, or decision-makers who want to understand whether promotional strategies are associated with measurable performance differences.
+The findings may help these stakeholders better understand whether promotional strategies are supported by observable sales patterns in the dataset.
 
 ## Dataset
+The dataset selected for this project contains retail sales information relevant to promotion analysis. It was chosen because it provides suitable variables for comparing sales outcomes under different promotion conditions and supports a practical FMCG business scenario.
 
-This project uses the following source files:
+For submission purposes, the cleaned dataset has been compressed to reduce file size and improve upload reliability.
 
-- `data/sales.csv`
-- `data/product_hierarchy.csv`
+## Submitted Files
+This submission includes the following files:
 
-The main analysis in the notebook is based on `sales.csv`, which contains transaction-related variables such as sales, revenue, stock, price, date, and promotion-related fields.
+- `README.md` – overview of the project  
+- `notebook.ipynb` – complete Python analysis workflow  
+- `cleaned_data.zip` – compressed cleaned dataset used in the final analysis  
 
-The `product_hierarchy.csv` file is included as a supporting dataset, although the main notebook analysis and visual outputs are primarily based on the sales dataset.
+## Analytical Process
+The project was completed through a structured analytical workflow:
 
-## Data Source Note
+1. **Data loading**  
+   The dataset was imported into Python for initial inspection.
 
-The dataset was selected because it is relevant to a business and marketing context and is suitable for demonstrating Python-based data cleaning, transformation, descriptive analysis, and visualisation. The source and access details should also be stated in the notebook or reflection report, as required in the assignment brief. 
+2. **Data cleaning**  
+   Missing values, formatting issues, and data quality problems were addressed to prepare the dataset for analysis.
 
-## Methods Used
+3. **Exploratory data analysis**  
+   Key variables were examined to understand the overall structure and characteristics of the dataset.
 
-The notebook follows a coherent analytical workflow, including:
+4. **Data visualization**  
+   Visual methods were used to compare sales performance across promotion categories and identify distribution patterns or outliers.
 
-1. **Problem definition**
-2. **Data loading**
-3. **Data cleaning and preparation**
-4. **Feature creation**
-5. **Exploratory data analysis**
-6. **Visualisation**
-7. **Interpretation of findings**
-8. **Summary and conclusion**
+5. **Statistical analysis**  
+   Statistical testing was applied where appropriate to examine whether differences in sales performance were meaningful.
 
-The main Python methods used include:
+6. **Business interpretation**  
+   The final step focused on translating analytical results into practical business insights.
 
-- reading CSV files with `pandas`
-- handling missing values
-- converting data types
-- creating a promotion indicator variable (`is_promoted`)
-- filtering invalid observations
-- summarising key variables
-- generating charts for comparison and interpretation
+## Tools and Libraries
+The analysis was conducted in Python using the following libraries:
 
-This structure follows the assignment expectation that the notebook should show a complete analytical workflow from data input to final output. 
-
-## Key Analysis Steps
-
-### 1. Data Cleaning
-The raw sales data were cleaned by:
-- converting the date column into datetime format
-- converting selected columns into numeric format
-- checking and handling missing values
-- removing invalid negative values in key variables
-- creating a promotion flag variable based on promotion-related columns
-
-### 2. Feature Engineering
-A binary variable named `is_promoted` was created to indicate whether a product observation was associated with promotional activity.
-
-### 3. Exploratory Analysis
-The notebook compares promotional and non-promotional observations using descriptive statistics and visualisations.
-
-### 4. Visualisation
-Charts were used to examine distributions and differences in sales and revenue, helping communicate the analytical results more clearly to the intended audience.
+- `pandas` for data cleaning and manipulation  
+- `matplotlib` for visualization  
+- `seaborn` for comparative statistical plots  
+- `scipy` and `statsmodels` for statistical analysis  
 
 ## Main Findings
+The analysis indicates that promotion status is associated with observable differences in sales performance. Both visual comparisons and statistical results suggest that promotions may contribute to higher sales in certain cases. At the same time, the results also show that promotional impact is not necessarily uniform across all observations.
 
-The notebook suggests that promotional status is associated with differences in business performance indicators such as sales and revenue. The exact interpretation should be based on the outputs presented in the notebook, but overall the project provides a data-driven view of promotion effectiveness in the FMCG context.
+This suggests that while promotions can be an effective retail strategy, their value should be assessed carefully using data rather than assumed in every situation.
 
-The analysis supports the idea that Python can be used not only for technical data processing but also for generating practical business insights.
+## Challenges Encountered
+Several challenges were encountered during the completion of this project:
 
-## Files Included
+- managing missing or incomplete data  
+- interpreting extreme values and outliers  
+- ensuring the cleaned dataset remained suitable for analysis  
+- reducing the final file size to meet submission requirements  
 
-This repository contains:
-
-- `README.md` – project overview and instructions
-- `*.ipynb` – Python notebook showing the full workflow
-- `data/sales.csv` – raw sales dataset
-- `data/product_hierarchy.csv` – supporting product hierarchy dataset
-- other related project files if applicable
-
-## File Note on Cleaned Dataset
-
-The cleaned dataset was not uploaded separately because of file size limitations.
-
-However, all data cleaning, transformation, and analysis steps are fully documented in the notebook. The entire workflow is reproducible by running the notebook from the original raw data files provided in the `data` folder.
-
-If needed, the cleaned dataset can be regenerated directly by running the export code included in the notebook.
-
-## How to Run the Project
-
-1. Download or clone this repository.
-2. Make sure the required data files are stored in the `data` folder:
-   - `sales.csv`
-   - `product_hierarchy.csv`
-3. Open the notebook in Jupyter Notebook or JupyterLab.
-4. Run the cells in order from top to bottom.
-
-## Requirements
-
-The project uses Python and common data analysis libraries, including:
-
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `seaborn`
-
-Please make sure these packages are installed before running the notebook.
-
-## Limitations
-
-This project has several limitations:
-
-- the analysis is based on the available variables in the dataset only
-- promotion effectiveness is evaluated mainly through descriptive analysis
-- other external factors that may influence sales are not fully modelled
-- the supporting product hierarchy dataset was not deeply integrated into the final analysis workflow
-
-These limitations should be considered when interpreting the findings.
+To address the final issue, the cleaned dataset was compressed before submission.
 
 ## Conclusion
-
-This project demonstrates a small Python-based data product that addresses a clear business question in the FMCG sector. By combining data cleaning, transformation, visualisation, and interpretation, the notebook provides a practical example of how Python can support business analysis and communication.
-
-## Assignment Context
-
-This repository was created for ACC102 Mini Assignment, Track 2: GitHub Data Analysis Project. According to the assignment requirements, Track 2 submissions should include a GitHub project, Python notebook or code files, a README, a 1–3 minute demo video, and a reflection report. All submitted materials must be in English. 
+Overall, this project demonstrates how Python can be used to investigate a realistic business problem in FMCG retail analytics. By combining data preparation, exploratory analysis, visualization, and statistical interpretation, the project provides a clear example of how analytical methods can support evidence-based business decisions regarding promotion effectiveness.
